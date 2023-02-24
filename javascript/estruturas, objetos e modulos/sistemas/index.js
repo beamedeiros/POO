@@ -1,3 +1,3 @@
-const modulinho = require('modulos/filme')
+const filme = require('modulos/filme')
 
-modulinho.atributo('As Branquelas')
+filme.atributo('As Branquelas')
