@@ -1,16 +1,12 @@
 import { Component } from "react";
 import CSS from 'csstype'
 
-type props = {
-    tema: string
-}
 const backgroundColor: CSS.Properties = {
     backgroundColor: '#73A2B9',
 }
 const fontStyle: CSS.Properties = {
     fontSize: 'x-large',
 }
-
 const botaoStyle: CSS.Properties = {
     padding: '10px'
 }
@@ -19,26 +15,23 @@ const fontcolor: CSS.Properties = {
     backgroundColor: '#EEEEEE'
 }
 
-export default class ListaProduto extends Component<any, props> {
-
+export default class ListaProduto extends Component<any> {
     render() {
         return (
             <div>
-                <>
-                    <nav className="">
-                        <div className="nav-wrapper" style={backgroundColor} >
-                            <a className="brand-logo" style={fontStyle}>🤍PetLovers</a>
-                            <div id="nav-mobile" className='right hide-on-med-and-down'>
-                                <a style={botaoStyle} href="/Home">Home</a>
-                                <a style={botaoStyle} href="/listaCliente">Cliente</a>
-                                <a style={botaoStyle} href="/listaProduto">Produto</a>
-                                <a style={botaoStyle} href="/listaPets">Pets</a>
-                                <a style={botaoStyle} href="/listaServicos">Serviços</a>
-                                <a style={botaoStyle} href="/Listagens">Listagens</a>
-                            </div>
+                <nav className="">
+                    <div className="nav-wrapper" style={backgroundColor} >
+                        <a className="brand-logo" style={fontStyle} href="/Home">🤍PetLovers</a>
+                        <div id="nav-mobile" className='right hide-on-med-and-down'>
+                            <a style={botaoStyle} href="/Home">Home</a>
+                            <a style={botaoStyle} href="/listaCliente">Cliente</a>
+                            <a style={botaoStyle} href="/listaProduto">Produto</a>
+                            <a style={botaoStyle} href="/listaPets">Pets</a>
+                            <a style={botaoStyle} href="/listaServicos">Serviços</a>
+                            <a style={botaoStyle} href="/Listagens">Listagens</a>
                         </div>
-                    </nav>
-                </>
+                    </div>
+                </nav>
                 <br />
                 <div className='container'>
                     <div className="collection">

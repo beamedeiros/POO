@@ -2,47 +2,33 @@ import { Component } from "react";
 import 'materialize-css/dist/css/materialize.min.css'
 import CSS from 'csstype'
 
-type props = {
-    tema: string
-}
 const backgroundColor: CSS.Properties = {
     backgroundColor: '#73A2B9',
 }
 const fontStyle: CSS.Properties = {
     fontSize: 'x-large',
 }
-
 const botaoStyle: CSS.Properties = {
     padding: '10px'
 }
-const fontcolor: CSS.Properties = {
-    color: '#000',
-    backgroundColor: '#EEEEEE'
-}
 
 export default class Listagens extends Component<any> {
-    // componentDidMount() {
-    //     console.log(M);
-    //     M.AutoInit();
-    // }
     render() {
         return (
             <div>
-                <>
-                    <nav className="">
-                        <div className="nav-wrapper" style={backgroundColor} >
-                            <a className="brand-logo" style={fontStyle}>🤍PetLovers</a>
-                            <div id="nav-mobile" className='right hide-on-med-and-down'>
+                <nav className="">
+                    <div className="nav-wrapper" style={backgroundColor} >
+                        <a className="brand-logo" style={fontStyle} href="/Home">🤍PetLovers</a>
+                        <div id="nav-mobile" className='right hide-on-med-and-down'>
                             <a style={botaoStyle} href="/Home">Home</a>
-                                <a style={botaoStyle} href="/listaCliente">Cliente</a>
-                                <a style={botaoStyle} href="/listaProduto">Produto</a>
-                                <a style={botaoStyle} href="/listaPets">Pets</a>
-                                <a style={botaoStyle} href="/listaServicos">Serviços</a>
-                                <a style={botaoStyle} href="/Listagens">Listagens</a>
-                            </div>
+                            <a style={botaoStyle} href="/listaCliente">Cliente</a>
+                            <a style={botaoStyle} href="/listaProduto">Produto</a>
+                            <a style={botaoStyle} href="/listaPets">Pets</a>
+                            <a style={botaoStyle} href="/listaServicos">Serviços</a>
+                            <a style={botaoStyle} href="/Listagens">Listagens</a>
                         </div>
-                    </nav>
-                </>
+                    </div>
+                </nav>
                 <div className='container center'>
                     <h4> <strong> Listagens de Consumo </strong> </h4>
                     <br></br>
@@ -176,7 +162,7 @@ export default class Listagens extends Component<any> {
                         <div id="3" className="col s12">
                             <form>
                                 <div>
-                                <h5>Produtos e Serviços Mais Consumidos</h5>
+                                    <h5>Produtos e Serviços Mais Consumidos</h5>
                                     <table className='responsive-table centered'>
                                         <thead>
                                             <tr>

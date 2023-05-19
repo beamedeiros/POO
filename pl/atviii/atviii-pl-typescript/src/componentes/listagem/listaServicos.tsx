@@ -1,6 +1,9 @@
 import { Component } from "react";
 import CSS from 'csstype'
 
+type props = {
+    tema: string
+}
 const backgroundColor: CSS.Properties = {
     backgroundColor: '#73A2B9',
 }
@@ -15,7 +18,8 @@ const fontcolor: CSS.Properties = {
     backgroundColor: '#EEEEEE'
 }
 
-export default class ListaServico extends Component<any> {
+export default class ListaServico extends Component<any, props> {
+
     render() {
         return (
             <div>

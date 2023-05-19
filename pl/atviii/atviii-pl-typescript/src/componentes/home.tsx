@@ -15,6 +15,7 @@ const backgroundColor: CSS.Properties = {
 const fontStyle: CSS.Properties = {
     fontSize: 'x-large',
 }
+
 const botaoStyle: CSS.Properties = {
     padding: '10px'
 }
@@ -42,15 +43,16 @@ class Home extends Component<any, props> {
                         <a className="brand-logo" style={fontStyle} href="/Home">🤍PetLovers</a>
                         <div id="nav-mobile" className='right hide-on-med-and-down'>
                             <a style={botaoStyle} href="/Home">Home</a>
-                            <a style={botaoStyle} href="/listaCliente">Cliente</a>
-                            <a style={botaoStyle} href="/listaProduto">Produto</a>
-                            <a style={botaoStyle} href="/listaPets">Pets</a>
-                            <a style={botaoStyle} href="/listaServicos">Serviços</a>
+                            <a style={botaoStyle} href="/clientes">Cliente</a>
+                            <a style={botaoStyle} href="/produtos">Produto</a>
+                            <a style={botaoStyle} href="/pets">Pets</a>
+                            <a style={botaoStyle} href="/servicos">Serviços</a>
                             <a style={botaoStyle} href="/Listagens">Listagens</a>
                         </div>
                     </div>
                 </nav>
                 <br />
+
                 <div style={displayContent}>
                     <div className="row">
                         <div className="col s6" style={card}>
@@ -61,10 +63,13 @@ class Home extends Component<any, props> {
                                 </div>
                             </div>
                         </div>
+
                         <div className="col s2" style={card}>
                             <div className="card">
                                 <div className="card-content">
+
                                     <img src={product} style={imgStyle} />
+
                                     <a className="waves-effect waves-light btn" style={backgroundColor} href="/formularioCadastroProduto">Cadastrar produtos</a>
                                 </div>
                             </div>
@@ -90,6 +95,7 @@ class Home extends Component<any, props> {
                     </div>
                 </div>
             </div>
+
         )
     }
 }

@@ -21,18 +21,26 @@ function App() {
       <Route index element={<Home/>}/>
       <Route path="*" element={<Navigate to="/"/>}/>
       <Route path="/Listagens" element={<Listagens/>}/>
-      <Route path="/listaCliente" element={<ListaCliente/>}/>
-      <Route path="/listaProduto" element={<ListaProduto/>}/>
-      <Route path="/listaPets" element={<ListaPet/>}/>
-      <Route path="/listaServicos" element={<ListaServico/>}/>
+      {/* <Route path="/listaCliente" element={<ListaCliente/>}/> */}
+      {/* <Route path="/listaProduto" element={<ListaProduto/>}/> */}
+      {/* <Route path="/listaPets" element={<ListaPet/>}/> */}
+      {/* <Route path="/listaServicos" element={<ListaServico/>}/> */}
       <Route path="/formularioCadastroCliente" element={<FormularioCadastroCliente/>}/>
+      <Route path="/formularioCadastroCliente/:id" element={<FormularioCadastroCliente/>}/>
       <Route path="/formularioCadastroProduto" element={<FormularioCadastroProduto/>}/>
+      <Route path="/formularioCadastroProduto/:id" element={<FormularioCadastroProduto/>}/>
       <Route path="/formularioCadastroServico" element={<FormularioCadastroServico/>}/>
+      <Route path="/formularioCadastroServico/:id" element={<FormularioCadastroServico/>}/>
       <Route path="/formularioCadastroPet" element={<FormularioCadastroPet/>}/>
+      <Route path="/formularioCadastroPet/:id" element={<FormularioCadastroPet/>}/>
+      <Route path="/clientes" element={<Clientes/>}/>
       <Route path="/produtos" element={<Produtos/>}/>
       <Route path="/pets" element={<Pets/>}/>
-      <Route path="/clientes" element={<Clientes/>}/>
       <Route path="/servicos" element={<Servicos/>}/>
+      {/* <Route path="/produtos/:id" element={<Produtos/>}/>
+      <Route path="/pets/:id" element={<Pets/>}/>
+      <Route path="/clientes/:id" element={<Clientes/>}/>
+      <Route path="/servicos/:id" element={<Servicos/>}/> */}
       </Routes>
       </BrowserRouter>
     );
