@@ -86,7 +86,7 @@ export default function Pets() {
                             <th>Ações</th>
                         </tr>
                     </thead>
-                    {pets.map((element, index) => {
+                    {pets.map((element) => {
                         return (
                             <tbody>
                                 <tr>

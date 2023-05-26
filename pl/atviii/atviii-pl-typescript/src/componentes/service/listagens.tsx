@@ -19,6 +19,413 @@ const tabStyle: CSS.Properties = {
 }
 
 export default function Listagens() {
+    const clientes = [
+        {
+            "id": 1,
+            "nome": "Eduardo Sakaue",
+            "nomeSocial": "Sakaue",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 3
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 2
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 6
+                },
+            ],
+        },
+        {
+            "id": 2,
+            "nome": "Juliana Martinez",
+            "nomeSocial": "Juliana",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 1
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 1
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 1
+                },
+            ],
+        },
+        {
+            "id": 3,
+            "nome": "Emanuel Mineda",
+            "nomeSocial": "Mineda",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 7
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 13
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 6
+                },
+            ],
+        },
+        {
+            "id": 4,
+            "nome": "Fernando Masanori",
+            "nomeSocial": "Masanori",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 8
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 1
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 1
+                },
+            ],
+        },
+        {
+            "id": 5,
+            "nome": "Gildárcio Souza",
+            "nomeSocial": "Gildárcio",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 12
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 10
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 4
+                },
+            ],
+        },
+        {
+            "id": 6,
+            "nome": "Pedro Motta",
+            "nomeSocial": "Pedro",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 34
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 16
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 2
+                },
+            ],
+        },
+        {
+            "id": 7,
+            "nome": "Beatriz Medeiros",
+            "nomeSocial": "Beatriz",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 3
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 10
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 10
+                },
+            ],
+        },
+        {
+            "id": 8,
+            "nome": "Diogo Branquinho",
+            "nomeSocial": "Branquinho",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 7
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 7
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 22
+                },
+            ],
+        },
+        {
+            "id": 9,
+            "nome": "Lucas Nadalete",
+            "nomeSocial": "Nadal",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 3
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 2
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 3
+                },
+            ],
+        },
+        {
+            "id": 10,
+            "nome": "Kauã Borgarelli",
+            "nomeSocial": "Kauã",
+            "cpf": "000.000.000-00",
+            "dataEmissao": "00/00/0000",
+            "telefone": "(00) 0000-0000",
+            "produto": [{
+                "id": 1,
+                "nome": "BelaVitae",
+                "descricao": "Shampoo",
+                "valor": 12.00,
+                "qtd": 7
+            }, {
+                "id": 3,
+                "nome": "Macarena",
+                "descricao": "Roupa para cachorro",
+                "valor": 50.90,
+                "qtd": 1
+            }],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 1
+                },
+            ],
+        },
+    ]
+
+    clientes.forEach(cli => {
+        cli.produto.forEach(prod => {
+            let qtd = prod.qtd
+        })
+    })
+
+    // const listaQtd = clientes.sort((a, b) => (a.qtd > b.qtd) ? - 1 : 1)
+    // const listaValor = clientes.sort((a, b) => (a.valor > b.valor) ? -1 : 1)
+
+    const produtos = [
+        {
+            "id": 1,
+            "nome": "BelaVitae",
+            "descricao": "Shampoo",
+            "valor": 12.00,
+            "qtd": 20
+        },
+        {
+            "id": 2,
+            "nome": "BelaVitae",
+            "descricao": "Condicionador",
+            "valor": 14.00,
+            "qtd": 40
+        },
+        {
+            "id": 3,
+            "nome": "Macarena",
+            "descricao": "Roupa para cachorro",
+            "valor": 50.90,
+            "qtd": 2
+        },
+    ]
+
+    const servicos = [
+        {
+            "id": 4,
+            "nome": "Banho",
+            "descricao": "Banho em pets",
+            "valor": 90.00,
+            "qtd": 100
+        },
+        {
+            "id": 5,
+            "nome": "Tosa",
+            "descricao": "Corte de unha e pêlo",
+            "valor": 145.00,
+            "qtd": 100
+        }
+    ]
+
+    const prodServ = [...produtos, ...servicos]
+
+    const listaPSQtd = prodServ.sort((a, b) => (a.qtd > b.qtd) ? -1 : 1)
+
+    const pets = [
+        {
+            "id": 1,
+            "nome": "Lili",
+            "tipo": "cachorro",
+            "raca": "Pug",
+            "genero": "F"
+        },
+        {
+            "id": 2,
+            "nome": "Luci",
+            "tipo": "gato",
+            "raca": "Siamês",
+            "genero": "M"
+        },
+        {
+            "id": 3,
+            "nome": "Belinha",
+            "tipo": "cachorro",
+            "raca": "Golden Retriever",
+            "genero": "F"
+        },
+        {
+            "id": 4,
+            "nome": "Salem",
+            "tipo": "gato",
+            "raca": "Siamês",
+            "genero": "M"
+        },
+        {
+            "id": 5,
+            "nome": "Pipoca",
+            "tipo": "porquinho da índia",
+            "raca": "Abissínio",
+            "genero": "F"
+        },
+    ]
+
+    const countTipo: any = {}
+
+    pets.forEach(element => {
+        countTipo[element.tipo] = (countTipo[element.tipo] || 0) + 1
+    });
+
+    const countRaca: any = {}
+
+    pets.forEach(element => {
+        countRaca[element.raca] = (countRaca[element.raca] || 0) + 1
+    });
+
     return (
         <div>
             <nav className="">
@@ -46,6 +453,7 @@ export default function Listagens() {
                             <li className="tab col s4"><a href="#4" style={tabStyle}>Consumo Por Tipo/Raça De Pet</a></li>
                         </ul>
                     </div>
+                    <br />
                     <div id="1" className="col s12">
                         <form>
                             <div>
@@ -56,68 +464,26 @@ export default function Listagens() {
                                             <th>Nome</th>
                                             <th>Nome social</th>
                                             <th>CPF</th>
+                                            <th>Quantidade</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Cliente 1</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 2</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 3</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 4</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 5</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 6</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 7</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 8</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 9</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 10</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                    </tbody>
+                                    {/* {listaQtd.map((element) => {
+                                        return (
+                                            <tbody key={element.id}>
+                                                <tr>
+                                                    <td>{element.nome}</td>
+                                                    <td>{element.nomeSocial}</td>
+                                                    <td>{element.cpf}</td>
+                                                    <td>{element.qtd}</td>
+                                                </tr>
+                                            </tbody>
+                                        )
+                                    })} */}
                                 </table>
                             </div>
                         </form>
                     </div>
-
                     <br />
-
-
                     <div id="2" className="col s12">
                         <form>
                             <div>
@@ -128,41 +494,26 @@ export default function Listagens() {
                                             <th>Nome</th>
                                             <th>Nome social</th>
                                             <th>CPF</th>
+                                            <th>Valor Total</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Cliente 1</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 2</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 3</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 4</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cliente 5</td>
-                                            <td>Cliente</td>
-                                            <td>000.000.000.00</td>
-                                        </tr>
-                                    </tbody>
+                                    {/* {listaValor.slice(0, 5).map((element) => {
+                                        return (
+                                            <tbody key={element.id}>
+                                                <tr>
+                                                    <td>{element.nome}</td>
+                                                    <td>{element.nomeSocial}</td>
+                                                    <td>{element.cpf}</td>
+                                                    <td>{element.valor}</td>
+                                                </tr>
+                                            </tbody>
+                                        )
+                                    })} */}
                                 </table>
                             </div>
                         </form>
-
                     </div>
-
+                    <br />
                     <div id="3" className="col s12">
                         <form>
                             <div>
@@ -172,26 +523,27 @@ export default function Listagens() {
                                         <tr>
                                             <th>Nome</th>
                                             <th>Valor</th>
+                                            <th>Descrição</th>
                                             <th>Total consumido</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Banho</td>
-                                            <td>R$60,00</td>
-                                            <td>9</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Shampoo</td>
-                                            <td>R$90.00</td>
-                                            <td>15</td>
-                                        </tr>
-                                    </tbody>
+                                    {listaPSQtd.map((element) => {
+                                        return (
+                                            <tbody key={element.id}>
+                                                <tr>
+                                                    <td>{element.nome}</td>
+                                                    <td>R${element.valor}</td>
+                                                    <td>{element.descricao}</td>
+                                                    <td>{element.qtd}</td>
+                                                </tr>
+                                            </tbody>
+                                        )
+                                    })}
                                 </table>
                             </div>
                         </form>
-
                     </div>
+                    <br />
                     <div id="4" className="col s12">
                         <form>
                             <h5 className='racaConsumoFont'>Tipo</h5>
@@ -199,16 +551,21 @@ export default function Listagens() {
                                 <table className='responsive-table centered'>
                                     <thead>
                                         <tr>
+                                            <th>Tipo</th>
                                             <th>Nome do Produto/Serviço</th>
                                             <th>Valor do Produto/Serviço</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>...</td>
-                                            <td>...</td>
-                                        </tr>
-                                    </tbody>
+                                    {pets.map((element) => {
+                                        return (
+                                            <tbody key={element.id}>
+                                                <tr>
+                                                    {/* <td>{countTipo.}</td> */}
+
+                                                </tr>
+                                            </tbody>
+                                        )
+                                    })}
                                 </table>
                             </div>
                             <br></br>
@@ -217,6 +574,7 @@ export default function Listagens() {
                                 <table className='responsive-table centered'>
                                     <thead>
                                         <tr>
+                                            <th>Raça</th>
                                             <th>Nome do Produto/Serviço</th>
                                             <th>Valor do Produto/Serviço</th>
                                         </tr>

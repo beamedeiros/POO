@@ -54,10 +54,10 @@ export default function ListaPet() {
                 </div>
             </nav>
             <br />
-            {pets.map((element, index) => {
+            {pets.map((element) => {
                 return (
                     <div className='container'>
-                        <div className="collection" key={index}>
+                        <div className="collection">
                             <a className="collection-item" style={fontcolor} href={`/pets/:id${element.id}`}>{element.nome}</a>
                         </div>
                     </div>

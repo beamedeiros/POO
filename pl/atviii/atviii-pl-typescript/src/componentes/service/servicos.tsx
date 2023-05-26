@@ -21,7 +21,7 @@ const ImagemStyle: CSS.Properties = {
 }
 
 export default function Servicos() {
-    const [servicos, setProdutos] = useState([
+    const [servicos, setServicos] = useState([
         {
             "id": 1,
             "nome": "Banho",
@@ -62,7 +62,7 @@ export default function Servicos() {
                             <th>Ações</th>
                         </tr>
                     </thead>
-                    {servicos.map((element, index) => {
+                    {servicos.map((element) => {
                         return (
                             <tbody>
                                 <tr>

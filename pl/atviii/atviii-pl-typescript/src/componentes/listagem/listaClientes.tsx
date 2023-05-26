@@ -55,10 +55,10 @@ export default function ListaCliente() {
                 </div>
             </nav>
             <br />
-            {clientes.map((element, index) => {
+            {clientes.map((element) => {
                 return (
                     <div className='container' >
-                        <div className="collection" key={index}>
+                        <div className="collection">
                             <a className="collection-item" style={fontcolor} href={`/clientes/:id${element.id}`}>{element.nome}</a>
                         </div>
                     </div>

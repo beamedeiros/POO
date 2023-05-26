@@ -16,7 +16,7 @@ const fontcolor: CSS.Properties = {
 }
 
 export default function ListaProduto() {
-        const [produtos, setPets] = useState([
+        const [produtos, setProdutos] = useState([
         {
             "id": 1,
             "nome": "Shampoo"

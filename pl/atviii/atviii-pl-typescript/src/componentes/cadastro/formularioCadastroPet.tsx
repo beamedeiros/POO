@@ -16,6 +16,7 @@ export default function FormularioCadastroPet() {
     const [tipo, setTipo] = useState('')
     const [raca, setRaca] = useState('')
     const [genero, setGenero] = useState('')
+    const [cpfCli, setCpfCli] = useState('')
 
     return (
         <div>
@@ -36,6 +37,12 @@ export default function FormularioCadastroPet() {
             <div className='container'>
                 <div className="row">
                     <form className="col s12">
+                        <div className="row">
+                            <div className="col s6">
+                                <label>CPF do Cliente</label>
+                                <input id="cpf_cli" type="text" className="validate" value={cpfCli} onChange={e => { setCpfCli(e.target.value) }} />
+                            </div>
+                        </div>
                         <div className="row">
                             <div className="col s6">
                                 <label>Nome</label>

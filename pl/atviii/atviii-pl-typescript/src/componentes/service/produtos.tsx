@@ -25,19 +25,19 @@ export default function Produtos() {
         {
             "id": 1,
             "nome": "BelaVitae",
-            "tipo": "Shampoo",
+            "descricao": "Shampoo",
             "valor": 12.00
         },
         {
             "id": 2,
             "nome": "BelaVitae",
-            "tipo": "Condicionador",
+            "descricao": "Condicionador",
             "valor": 14.00
         },
         {
             "id": 3,
             "nome": "Macarena",
-            "tipo": "Roupa para cachorro",
+            "descricao": "Roupa para cachorro",
             "valor": 50.90
         },
     ])
@@ -63,7 +63,7 @@ export default function Produtos() {
                     <thead>
                         <tr>
                             <th>Nome Produto</th>
-                            <th>Tipo</th>
+                            <th>Descrição</th>
                             <th>Valor</th>
                             <th>Ações</th>
                         </tr>
@@ -73,7 +73,7 @@ export default function Produtos() {
                             <tbody>
                                 <tr>
                                     <td>{element.nome}</td>
-                                    <td>{element.tipo}</td>
+                                    <td>{element.descricao}</td>
                                     <td>R${element.valor}</td>
                                     <td>
                                         <Link to={`/formularioCadastroProduto/:id${element.id}`}>
