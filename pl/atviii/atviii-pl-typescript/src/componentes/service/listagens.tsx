@@ -1,4 +1,3 @@
-import { useState } from "react";
 import 'materialize-css/dist/css/materialize.min.css'
 import CSS from 'csstype'
 
@@ -27,28 +26,8 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 3
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 2
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 6
-                },
-            ],
+            "qtd": 4,
+            "valor": 120.67
         },
         {
             "id": 2,
@@ -57,28 +36,8 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 1
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 1
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 1
-                },
-            ],
+            "qtd": 7,
+            "valor": 220
         },
         {
             "id": 3,
@@ -87,28 +46,8 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 7
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 13
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 6
-                },
-            ],
+            "qtd": 28,
+            "valor": 900
         },
         {
             "id": 4,
@@ -117,28 +56,8 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 8
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 1
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 1
-                },
-            ],
+            "qtd": 1,
+            "valor": 80
         },
         {
             "id": 5,
@@ -147,28 +66,8 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 12
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 10
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 4
-                },
-            ],
+            "qtd": 10,
+            "valor": 40
         },
         {
             "id": 6,
@@ -177,28 +76,8 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 34
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 16
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 2
-                },
-            ],
+            "qtd": 12,
+            "valor": 700
         },
         {
             "id": 7,
@@ -207,28 +86,8 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 3
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 10
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 10
-                },
-            ],
+            "qtd": 4,
+            "valor": 600
         },
         {
             "id": 8,
@@ -237,28 +96,8 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 7
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 7
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 22
-                },
-            ],
+            "qtd": 0,
+            "valor": 0
         },
         {
             "id": 9,
@@ -267,28 +106,8 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 3
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 2
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 3
-                },
-            ],
+            "qtd": 20,
+            "valor": 100
         },
         {
             "id": 10,
@@ -297,39 +116,13 @@ export default function Listagens() {
             "cpf": "000.000.000-00",
             "dataEmissao": "00/00/0000",
             "telefone": "(00) 0000-0000",
-            "produto": [{
-                "id": 1,
-                "nome": "BelaVitae",
-                "descricao": "Shampoo",
-                "valor": 12.00,
-                "qtd": 7
-            }, {
-                "id": 3,
-                "nome": "Macarena",
-                "descricao": "Roupa para cachorro",
-                "valor": 50.90,
-                "qtd": 1
-            }],
-            "servico": [
-                {
-                    "id": 4,
-                    "nome": "Banho",
-                    "descricao": "Banho em pets",
-                    "valor": 90.00,
-                    "qtd": 1
-                },
-            ],
+            "qtd": 9,
+            "valor": 700
         },
     ]
 
-    clientes.forEach(cli => {
-        cli.produto.forEach(prod => {
-            let qtd = prod.qtd
-        })
-    })
-
-    // const listaQtd = clientes.sort((a, b) => (a.qtd > b.qtd) ? - 1 : 1)
-    // const listaValor = clientes.sort((a, b) => (a.valor > b.valor) ? -1 : 1)
+    const listaQtd = clientes.slice().sort((a, b) => b.qtd - a.qtd);
+    const listaValor = clientes.slice(0, 5).sort((a, b) => b.valor - a.valor);
 
     const produtos = [
         {
@@ -374,7 +167,7 @@ export default function Listagens() {
 
     const prodServ = [...produtos, ...servicos]
 
-    const listaPSQtd = prodServ.sort((a, b) => (a.qtd > b.qtd) ? -1 : 1)
+    const listaPSQtd = prodServ.slice().sort((a, b) => b.qtd - a.qtd)
 
     const pets = [
         {
@@ -382,49 +175,216 @@ export default function Listagens() {
             "nome": "Lili",
             "tipo": "cachorro",
             "raca": "Pug",
-            "genero": "F"
+            "genero": "F",
+            "produto": [
+                {
+                    "id": 1,
+                    "nome": "BelaVitae",
+                    "descricao": "Shampoo",
+                    "valor": 12.00,
+                    "qtd": 3
+                }
+            ],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 3
+                },
+            ]
         },
         {
             "id": 2,
             "nome": "Luci",
             "tipo": "gato",
             "raca": "Siamês",
-            "genero": "M"
+            "genero": "M",
+            "produto": [
+                {
+                    "id": 1,
+                    "nome": "BelaVitae",
+                    "descricao": "Shampoo",
+                    "valor": 12.00,
+                    "qtd": 1
+                }
+            ],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 7
+                },
+            ]
         },
         {
             "id": 3,
             "nome": "Belinha",
             "tipo": "cachorro",
             "raca": "Golden Retriever",
-            "genero": "F"
+            "genero": "F",
+            "produto": [
+                {
+                    "id": 1,
+                    "nome": "BelaVitae",
+                    "descricao": "Shampoo",
+                    "valor": 12.00,
+                    "qtd": 6
+                }
+            ],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 15
+                },
+            ]
         },
         {
             "id": 4,
             "nome": "Salem",
             "tipo": "gato",
             "raca": "Siamês",
-            "genero": "M"
+            "genero": "M",
+            "produto": [
+                {
+                    "id": 1,
+                    "nome": "BelaVitae",
+                    "descricao": "Shampoo",
+                    "valor": 12.00,
+                    "qtd": 4
+                }
+            ],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 4
+                },
+            ]
         },
         {
             "id": 5,
             "nome": "Pipoca",
             "tipo": "porquinho da índia",
             "raca": "Abissínio",
-            "genero": "F"
+            "genero": "F",
+            "produto": [
+                {
+                    "id": 1,
+                    "nome": "BelaVitae",
+                    "descricao": "Shampoo",
+                    "valor": 12.00,
+                    "qtd": 8
+                }
+            ],
+            "servico": [
+                {
+                    "id": 4,
+                    "nome": "Banho",
+                    "descricao": "Banho em pets",
+                    "valor": 90.00,
+                    "qtd": 9
+                },
+            ]
         },
     ]
 
-    const countTipo: any = {}
+    // const countAll: any = {}
 
-    pets.forEach(element => {
-        countTipo[element.tipo] = (countTipo[element.tipo] || 0) + 1
+    // pets.forEach(element => {
+    //     countTipo[element.tipo] = (countTipo[element.tipo] || 0) + 1
+    //     element.produto.forEach(prod => {
+    //         let produto = prod.qtd * prod.valor
+    //         console.log(produto)
+    //     })
+    //     element.servico.forEach(serv => {
+    //         let servico = serv.qtd * serv.valor
+    //         console.log(servico)
+    //     })
+    // });
+
+    interface GroupedPet {
+        tipo: string;
+        raca: string;
+        produtos: Record<string, number>;
+        servicos: Record<string, number>;
+    }
+
+    const groupedPets: Record<string, GroupedPet> = {};
+
+    pets.forEach((pet) => {
+        const key = `${pet.tipo}-${pet.raca}`;
+
+        if (!groupedPets[key]) {
+            groupedPets[key] = {
+                tipo: pet.tipo,
+                raca: pet.raca,
+                produtos: {},
+                servicos: {},
+            };
+        }
+
+        const group = groupedPets[key];
+
+        // Count the occurrences of produtos
+        pet.produto.forEach((produto) => {
+            const produtoKey = `${produto.nome}`;
+            if (!group.produtos[produtoKey]) {
+                group.produtos[produtoKey] = 0;
+            }
+            group.produtos[produtoKey] += produto.qtd;
+        });
+
+        // Count the occurrences of servicos
+        pet.servico.forEach((servico) => {
+            const servicoKey = `${servico.nome}`;
+            if (!group.servicos[servicoKey]) {
+                group.servicos[servicoKey] = 0;
+            }
+            group.servicos[servicoKey] += servico.qtd;
+        });
     });
 
-    const countRaca: any = {}
-
-    pets.forEach(element => {
-        countRaca[element.raca] = (countRaca[element.raca] || 0) + 1
+    // Sort the groupedPets by the total qtd in descending order
+    const sortedGroupedPets = Object.values(groupedPets).sort((a, b) => {
+        const totalA = Object.values(a.produtos).reduce((sum, value) => sum + value, 0) +
+            Object.values(a.servicos).reduce((sum, value) => sum + value, 0);
+        const totalB = Object.values(b.produtos).reduce((sum, value) => sum + value, 0) +
+            Object.values(b.servicos).reduce((sum, value) => sum + value, 0);
+        return totalB - totalA;
     });
+
+    // Output the results
+    sortedGroupedPets.forEach((group) => {
+        const tipo = group.tipo;
+        const raca = group.raca;
+
+        Object.entries(group.produtos).forEach(([produto, qtd]) => {
+            console.log(`${tipo} ${raca} ${produto} qtd = ${qtd}`);
+        });
+
+        Object.entries(group.servicos).forEach(([servico, qtd]) => {
+            console.log(`${tipo} ${raca} ${servico} qtd = ${qtd}`);
+        });
+    });
+
+    const sortedQuantities = Object.values(groupedPets)
+        .flatMap((group) => [
+            ...Object.values(group.produtos),
+            ...Object.values(group.servicos),
+        ])
+        .map((quantity) => Number(quantity))
+        .sort((a, b) => b - a);
+
+
 
     return (
         <div>
@@ -464,21 +424,23 @@ export default function Listagens() {
                                             <th>Nome</th>
                                             <th>Nome social</th>
                                             <th>CPF</th>
+                                            <th>Telefone</th>
                                             <th>Quantidade</th>
                                         </tr>
                                     </thead>
-                                    {/* {listaQtd.map((element) => {
+                                    {listaQtd.map((element) => {
                                         return (
                                             <tbody key={element.id}>
                                                 <tr>
                                                     <td>{element.nome}</td>
                                                     <td>{element.nomeSocial}</td>
                                                     <td>{element.cpf}</td>
+                                                    <td>{element.telefone}</td>
                                                     <td>{element.qtd}</td>
                                                 </tr>
                                             </tbody>
                                         )
-                                    })} */}
+                                    })}
                                 </table>
                             </div>
                         </form>
@@ -494,21 +456,23 @@ export default function Listagens() {
                                             <th>Nome</th>
                                             <th>Nome social</th>
                                             <th>CPF</th>
+                                            <th>Telefone</th>
                                             <th>Valor Total</th>
                                         </tr>
                                     </thead>
-                                    {/* {listaValor.slice(0, 5).map((element) => {
+                                    {listaValor.map((element) => {
                                         return (
                                             <tbody key={element.id}>
                                                 <tr>
                                                     <td>{element.nome}</td>
                                                     <td>{element.nomeSocial}</td>
                                                     <td>{element.cpf}</td>
+                                                    <td>{element.telefone}</td>
                                                     <td>{element.valor}</td>
                                                 </tr>
                                             </tbody>
                                         )
-                                    })} */}
+                                    })}
                                 </table>
                             </div>
                         </form>
@@ -552,46 +516,43 @@ export default function Listagens() {
                                     <thead>
                                         <tr>
                                             <th>Tipo</th>
-                                            <th>Nome do Produto/Serviço</th>
-                                            <th>Valor do Produto/Serviço</th>
-                                        </tr>
-                                    </thead>
-                                    {pets.map((element) => {
-                                        return (
-                                            <tbody key={element.id}>
-                                                <tr>
-                                                    {/* <td>{countTipo.}</td> */}
-
-                                                </tr>
-                                            </tbody>
-                                        )
-                                    })}
-                                </table>
-                            </div>
-                            <br></br>
-                            <h5 className='racaConsumoFont'>Raça</h5>
-                            <div>
-                                <table className='responsive-table centered'>
-                                    <thead>
-                                        <tr>
                                             <th>Raça</th>
-                                            <th>Nome do Produto/Serviço</th>
-                                            <th>Valor do Produto/Serviço</th>
+                                            <th>Nome do Produto/ Serviço</th>
+                                            <th>Quantidade</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>...</td>
-                                            <td>...</td>
-                                        </tr>
+                                        {sortedGroupedPets.map((group) => (
+                                            <>
+                                                {Object.entries(group.servicos)
+                                                    .sort(([a], [b]) => sortedQuantities.indexOf(Number(b)) - sortedQuantities.indexOf(Number(a)))
+                                                    .map(([servico, qtd]) => (
+                                                        <tr key={`${group.tipo}-${group.raca}-${servico}`}>
+                                                            <td>{group.tipo}</td>
+                                                            <td>{group.raca}</td>
+                                                            <td>{servico}</td>
+                                                            <td>{qtd}</td>
+                                                        </tr>
+                                                    ))}
+                                                {Object.entries(group.produtos)
+                                                    .sort(([a], [b]) => sortedQuantities.indexOf(Number(b)) - sortedQuantities.indexOf(Number(a)))
+                                                    .map(([produto, qtd]) => (
+                                                        <tr key={`${group.tipo}-${group.raca}-${produto}`}>
+                                                            <td>{group.tipo}</td>
+                                                            <td>{group.raca}</td>
+                                                            <td>{produto}</td>
+                                                            <td>{qtd}</td>
+                                                        </tr>
+                                                    ))}
+                                            </>
+                                        ))}
                                     </tbody>
                                 </table>
                             </div>
                         </form>
-
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
