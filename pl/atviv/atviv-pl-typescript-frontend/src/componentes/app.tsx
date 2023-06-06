@@ -21,7 +21,7 @@ function App() {
       <Route index element={<Home/>}/>
       <Route path="*" element={<Navigate to="/"/>}/>
       <Route path="/Listagens" element={<Listagens/>}/>
-      {/* <Route path="/listaCliente" element={<ListaCliente/>}/> */}
+      <Route path="/clientes" element={<ListaCliente/>}/>
       {/* <Route path="/listaProduto" element={<ListaProduto/>}/> */}
       {/* <Route path="/listaPets" element={<ListaPet/>}/> */}
       {/* <Route path="/listaServicos" element={<ListaServico/>}/> */}
@@ -33,7 +33,8 @@ function App() {
       <Route path="/formularioCadastroServico/:id" element={<FormularioCadastroServico/>}/>
       <Route path="/formularioCadastroPet" element={<FormularioCadastroPet/>}/>
       <Route path="/formularioCadastroPet/:id" element={<FormularioCadastroPet/>}/>
-      <Route path="/clientes" element={<Clientes/>}/>
+      {/* <Route path="/clientes" element={<Clientes/>}/> */}
+      <Route path="/clientes/:id" element={<Clientes/>}/>
       <Route path="/produtos" element={<Produtos/>}/>
       <Route path="/pets" element={<Pets/>}/>
       <Route path="/servicos" element={<Servicos/>}/>

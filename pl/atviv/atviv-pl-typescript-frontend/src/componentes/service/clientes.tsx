@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import CSS from 'csstype'
 import editar from '../../Icons/editar.png'
 import excluir from '../../Icons/excluir.png'
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import ClienteService from "../../services/clienteService";
 
 const backgroundColor: CSS.Properties = {
     backgroundColor: '#73A2B9',
@@ -13,65 +14,29 @@ const fontStyle: CSS.Properties = {
 const botaoStyle: CSS.Properties = {
     padding: '10px'
 }
-const ImagemStyle: CSS.Properties = {
-    padding: '5px',
-    maxHeight: '30px',
-    maxWidth: '30px'
-}
 
 export default function Clientes() {
-    const [clientes, setClientes] = useState([
-        {
-            "id": 1,
-            "nome": "Eduardo Sakaue",
-            "nomeSocial": "Sakaue",
-            "cpf": "000.000.000-00",
-            "dataEmissao": "00/00/0000",
-            "telefone": "(00) 0000-0000",
-            "produto": "Roupa",
-            "servico": "Banho"
-        },
-        {
-            "id": 2,
-            "nome": "Juliana Martinez",
-            "nomeSocial": "Juliana",
-            "cpf": "000.000.000-00",
-            "dataEmissao": "00/00/0000",
-            "telefone": "(00) 0000-0000",
-            "produto": "Shampoo",
-            "servico": ""
-        },
-        {
-            "id": 3,
-            "nome": "Emanuel Mineda",
-            "nomeSocial": "Mineda",
-            "cpf": "000.000.000-00",
-            "dataEmissao": "00/00/0000",
-            "telefone": "(00) 0000-0000",
-            "produto": "Condicionador",
-            "servico": "Tosa"
-        },
-        {
-            "id": 4,
-            "nome": "Fernando Masanori",
-            "nomeSocial": "Masanori",
-            "cpf": "000.000.000-00",
-            "dataEmissao": "00/00/0000",
-            "telefone": "(00) 0000-0000",
-            "produto": "Coleira",
-            "servico": "Banho"
-        },
-        {
-            "id": 5,
-            "nome": "Gildárcio Souza",
-            "nomeSocial": "Gildárcio",
-            "cpf": "000.000.000-00",
-            "dataEmissao": "00/00/0000",
-            "telefone": "(00) 0000-0000",
-            "produto": "Laço",
-            "servico": ""
+    const [clientes, setClientes] = useState<any[]>([])
+    const { id } = useParams()
+
+    useEffect(() => {
+        fetchClientDetails()
+    }, [])
+
+    const fetchClientDetails = async () => {
+        try {
+            const response = await ClienteService.getById(id)
+            setClientes([response.data])
+        } catch (error) {
+            console.log("Erro: ", error)
         }
-    ])
+    }
+
+    const deleteClient = async () => {
+        await ClienteService.remove(id)
+        console.log('Cliente excluído com sucesso!');
+    }
+
     return (
         <div>
             <nav className="">
@@ -88,46 +53,81 @@ export default function Clientes() {
                 </div>
             </nav>
             <br />
-            <h5 className="center-align">Clientes</h5>
             <div className='container'>
+                {clientes.map((element, index) => {
+                    return (
+                        <>
+                            <h5> Cliente: {element.nome}</h5>
+                            <table className='highlight centered'>
+                                <thead>
+                                    <tr>
+                                        <th>Nome social</th>
+                                        <th>Email</th>
+                                        <th>Telefones</th>
+                                    </tr>
+                                </thead>
+                                <tbody key={element.id}>
+                                    <tr>
+                                        <td>{element.nomeSocial}</td>
+                                        <td>{element.email}</td>
+                                        <td>
+                                            {element.telefones.map((telefone: any) => (
+                                                <div key={telefone.id}>
+                                                    ({telefone.ddd}) {telefone.numero}
+                                                </div>
+                                            ))}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br />
+                            <h6>Endereço</h6>
+                            <table className='highlight centered'>
+                                <thead>
+                                    <tr>
+                                        <th>Estado</th>
+                                        <th>Cidade</th>
+                                        <th>Bairro</th>
+                                        <th>Rua</th>
+                                        <th>Número</th>
+                                        <th>CEP</th>
+                                    </tr>
+                                </thead>
+                                <tbody key={element.endereco.id}>
+                                    <tr>
+                                        <td>{element.endereco.estado}</td>
+                                        <td>{element.endereco.cidade}</td>
+                                        <td>{element.endereco.bairro}</td>
+                                        <td>{element.endereco.rua}</td>
+                                        <td>{element.endereco.numero}</td>
+                                        <td>{element.endereco.codigoPostal}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <label>Informações Adicionais: </label>
+                            <label>{element.endereco.informacoesAdicionais}</label>
 
-                <table className='highlight centered'>
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Nome social</th>
-                            <th>CPF</th>
-                            <th>Data de emissão</th>
-                            <th>Telefone</th>
-                            <th>Produto</th>
-                            <th>Serviço</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    {clientes.map((element, index) => {
-                        return (
-                            <tbody>
-                                <tr>
-                                    <td>{element.nome}</td>
-                                    <td>{element.nomeSocial}</td>
-                                    <td>{element.cpf}</td>
-                                    <td>{element.dataEmissao}</td>
-                                    <td>{element.telefone}</td>
-                                    <td>{element.produto}</td>
-                                    <td>{element.servico}</td>
-                                    <td>
-                                        <Link to={`/formularioCadastroCliente/:id${element.id}`}>
-                                            <img src={editar} alt="" style={ImagemStyle} />
+                            <div className="row" style={{ marginTop: "20px", display: "flex", justifyContent: "flex-end" }}>
+                                <div className="col">
+                                    <button className="btn waves-effect waves-light" style={backgroundColor} type="button" name="action">
+                                        <Link style={{ color: "#ffffff" }} to={`/formularioCadastroCliente/${element.id}`}>
+                                            Editar Cliente
                                         </Link>
-                                        <img src={excluir} alt="" style={ImagemStyle} />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        )
-                    })}
-                </table>
-                <br></br>
+                                    </button>
+                                </div>
+                                <div className="col">
+                                    <button className="btn waves-effect waves-light" style={backgroundColor} type="button" name="action" onClick={deleteClient}>
+                                        <Link style={{ color: "#ffffff" }} to={`/clientes`}>
+                                            Excluir Cliente
+                                        </Link>
+                                    </button>
+                                </div>
+                            </div>
+                        </>
+                    )
+                })}
             </div>
-        </div>
+            <br />
+        </div >
     )
 }

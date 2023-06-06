@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CSS from 'csstype'
+import ClienteService from "../../services/clienteService";
+import { Link } from "react-router-dom";
 
 const backgroundColor: CSS.Properties = {
     backgroundColor: '#73A2B9',
@@ -16,28 +18,20 @@ const fontcolor: CSS.Properties = {
 }
 
 export default function ListaCliente() {
-    const [clientes, setClientes] = useState([
-        {
-            "id": 1,
-            "nome": "Eduardo"
-        },
-        {
-            "id": 2,
-            "nome": "Juliana"
-        },
-        {
-            "id": 3,
-            "nome": "Emanuel"
-        },
-        {
-            "id": 4,
-            "nome": "Fernando"
-        },
-        {
-            "id": 5,
-            "nome": "Gildárcio"
+    const [clientes, setClientes] = useState<any[]>([])
+
+    useEffect(() => {
+        fetchClientes()
+    }, [])
+
+    const fetchClientes = async () => {
+        try {
+            const response = await ClienteService.getAll()
+            setClientes(response.data);
+        } catch (error) {
+            console.error('Erro: ', error)
         }
-    ])
+    }
 
     return (
         <div>
@@ -57,9 +51,9 @@ export default function ListaCliente() {
             <br />
             {clientes.map((element) => {
                 return (
-                    <div className='container' >
+                    <div className='container' key={element.id}>
                         <div className="collection">
-                            <a className="collection-item" style={fontcolor} href={`/clientes/:id${element.id}`}>{element.nome}</a>
+                            <Link className="collection-item" style={fontcolor} to={`/clientes/${element.id}`} >{element.nome}</Link>
                         </div>
                     </div>
                 )

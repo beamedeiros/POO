@@ -13,7 +13,7 @@ const botaoStyle: CSS.Properties = {
 
 export default function FormularioCadastroServico() {
     const [nome, setNome] = useState('')
-    const [tipo, setTipo] = useState('')
+    const [descricao, setDescricao] = useState('')
     const [valor, setValor] = useState('')
 
     return (
@@ -41,8 +41,8 @@ export default function FormularioCadastroServico() {
                                 <input id="nome_servico" type="text" className="validate" value={nome} onChange={e => { setNome(e.target.value) }} />
                             </div>
                             <div className="col s6">
-                                <label>Tipo</label>
-                                <input id="tipo" type="text" className="validate" value={tipo} onChange={e => { setTipo(e.target.value) }} />
+                                <label>Descrição</label>
+                                <input id="descricao" type="text" className="validate" value={descricao} onChange={e => { setDescricao(e.target.value) }} />
                             </div>
                             <div className="col s6">
                                 <label>Valor</label>
