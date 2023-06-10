@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CSS from 'csstype'
 
 const backgroundColor: CSS.Properties = {
@@ -16,7 +15,7 @@ const fontcolor: CSS.Properties = {
 }
 
 export default function ListaCliente() {
-    const [clientes, setClientes] = useState([
+    const clientes = [
         {
             "id": 1,
             "nome": "Eduardo"
@@ -37,8 +36,7 @@ export default function ListaCliente() {
             "id": 5,
             "nome": "Gildárcio"
         }
-    ])
-
+    ]
     return (
         <div>
             <nav className="">

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CSS from 'csstype'
 import editar from '../../Icons/editar.png'
 import excluir from '../../Icons/excluir.png'
@@ -21,7 +20,7 @@ const ImagemStyle: CSS.Properties = {
 }
 
 export default function Servicos() {
-    const [servicos, setServicos] = useState([
+    const servicos = [
         {
             "id": 1,
             "nome": "Banho",
@@ -34,7 +33,7 @@ export default function Servicos() {
             "descricao": "Corte de unha e pêlo",
             "valor": 145.00
         }
-    ])
+    ]
     return (
         <div>
             <nav className="">

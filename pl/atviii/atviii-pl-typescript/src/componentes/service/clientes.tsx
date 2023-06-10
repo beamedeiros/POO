@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CSS from 'csstype'
 import editar from '../../Icons/editar.png'
 import excluir from '../../Icons/excluir.png'
@@ -20,7 +19,7 @@ const ImagemStyle: CSS.Properties = {
 }
 
 export default function Clientes() {
-    const [clientes, setClientes] = useState([
+    const clientes = [
         {
             "id": 1,
             "nome": "Eduardo Sakaue",
@@ -71,7 +70,7 @@ export default function Clientes() {
             "produto": "Laço",
             "servico": ""
         }
-    ])
+    ]
     return (
         <div>
             <nav className="">

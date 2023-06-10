@@ -297,20 +297,6 @@ export default function Listagens() {
         },
     ]
 
-    // const countAll: any = {}
-
-    // pets.forEach(element => {
-    //     countTipo[element.tipo] = (countTipo[element.tipo] || 0) + 1
-    //     element.produto.forEach(prod => {
-    //         let produto = prod.qtd * prod.valor
-    //         console.log(produto)
-    //     })
-    //     element.servico.forEach(serv => {
-    //         let servico = serv.qtd * serv.valor
-    //         console.log(servico)
-    //     })
-    // });
-
     interface GroupedPet {
         tipo: string;
         raca: string;
@@ -334,7 +320,6 @@ export default function Listagens() {
 
         const group = groupedPets[key];
 
-        // Count the occurrences of produtos
         pet.produto.forEach((produto) => {
             const produtoKey = `${produto.nome}`;
             if (!group.produtos[produtoKey]) {
@@ -343,7 +328,6 @@ export default function Listagens() {
             group.produtos[produtoKey] += produto.qtd;
         });
 
-        // Count the occurrences of servicos
         pet.servico.forEach((servico) => {
             const servicoKey = `${servico.nome}`;
             if (!group.servicos[servicoKey]) {
@@ -353,7 +337,6 @@ export default function Listagens() {
         });
     });
 
-    // Sort the groupedPets by the total qtd in descending order
     const sortedGroupedPets = Object.values(groupedPets).sort((a, b) => {
         const totalA = Object.values(a.produtos).reduce((sum, value) => sum + value, 0) +
             Object.values(a.servicos).reduce((sum, value) => sum + value, 0);
@@ -362,7 +345,6 @@ export default function Listagens() {
         return totalB - totalA;
     });
 
-    // Output the results
     sortedGroupedPets.forEach((group) => {
         const tipo = group.tipo;
         const raca = group.raca;

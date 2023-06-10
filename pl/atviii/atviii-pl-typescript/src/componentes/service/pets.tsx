@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CSS from 'csstype'
 import editar from '../../Icons/editar.png'
 import excluir from '../../Icons/excluir.png'
@@ -20,7 +19,7 @@ const ImagemStyle: CSS.Properties = {
 }
 
 export default function Pets() {
-    const [pets, setPets] = useState([
+    const pets = [
         {
             "id": 1,
             "nome": "Lili",
@@ -57,7 +56,7 @@ export default function Pets() {
             "raca": "",
             "genero": "F"
         },
-    ])
+    ]
     return (
         <div>
             <nav className="">
